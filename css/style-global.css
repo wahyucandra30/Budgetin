@@ -1,0 +1,177 @@
+body, html
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    scroll-padding: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    background-color: #ffffff;
+}
+.wrapper
+{
+    width: 100%;
+}
+#collapsed-panel
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+}
+#collapsed-panel a
+{
+    display: block;
+    text-decoration: none;
+    margin: 20px;
+
+    font-size: 1.5rem;
+    color: #000000;
+}
+#collapsed-panel .btn-close
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin: 65px 35px;
+    border: none;
+    background-color:transparent;
+}
+#collapsed-panel #img-btn-close
+{
+    width: 24px;
+}
+header
+{
+    background-color: #ffffff;
+    padding: 25px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+    max-height: 81px;
+}
+.logo-header
+{
+    margin: 0;
+    display: inline-block;
+    font-size: 26px;
+    font-weight: normal;
+    cursor: pointer;
+    
+    text-decoration: none;
+    color: #000000;
+}
+.nav-and-reg
+{
+    float: right;
+}
+.nav-header
+{
+    float: left;
+}
+.nav-header ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-header li
+{
+    display: inline-block;
+    padding: 0;
+    margin-top: 5px;
+    margin-right: 30px;
+}
+.nav-header a
+{
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.25em;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    transition: border 0.2s;
+}
+.nav-header a:hover
+{
+    border-color: rgba(0, 0, 0, 1);
+}
+.btn-signin
+{
+    float: right;
+    padding: 5px 15px;
+
+    outline: none;
+    border: 0;
+    background-color: #076363;
+    color: #ffffff;
+    font-size: 1.25em;
+
+    cursor: pointer;
+}
+.btn-collapse
+{
+    cursor: pointer;
+}
+@media screen and (max-width: 280px)
+{
+    .logo-header
+    {
+        font-size: 22px;
+    }
+    .btn-signin
+    {
+        font-size: 1em;
+    }
+    .btn-collapse img
+    {
+        display: none;
+    }
+}
+@media screen and (max-width: 340px)
+{
+    .logo-header
+    {
+        font-size: 22px;
+    }
+    .btn-signin
+    {
+        font-size: 1em;
+    }
+    .btn-collapse img
+    {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 767px) 
+{
+    .nav-header
+    {
+        display: none;
+    }
+    .btn-collapse
+    {
+        float: right;
+        padding: 0;
+        margin-left: 20px;
+        border: 0;
+    
+        width: auto;
+        height: auto;
+    
+        background-color: transparent;
+    }
+
+}
+
+@media screen and (min-width: 768px)
+{
+    .btn-collapse
+    {
+        display: none;
+    }
+}

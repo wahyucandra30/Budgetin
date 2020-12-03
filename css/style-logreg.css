@@ -1,0 +1,132 @@
+.wrapper
+{
+    height: 100%;
+    background-image: url(../img/ss-1-blur.jpg);
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+}
+.log-reg
+{
+    max-width: 320px;
+    max-height: 600px;
+    padding: 20px 30px;
+
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 5px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+}
+.log
+{
+    margin: 18vh auto 0;
+}
+.reg
+{
+    margin: 5vh auto 40px;
+}
+.tab-menu
+{
+    border-bottom: 1px solid #d2d2d2;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.tab-menu a
+{
+    margin: 0 20px 0 0;
+    padding: 15px 0;
+    display: inline-block;
+    font-size: 1.6rem;
+
+    text-decoration: none;
+    color: #999999;
+}
+.tab-menu .tab-menu-active
+{
+    color: #076363;
+    border-bottom: 2px solid #076363;
+}
+.log-reg form
+{
+    width: 100%;
+    text-align: center;
+}
+.log-reg .input-text
+{
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 1px solid #d3d3d3;
+    background-color: #f0f0f0;
+    font-size: 1.25rem;
+    outline: none;
+}
+.log-reg .btn-submit
+{
+    padding: 1rem;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #d3d3d3;
+    font-size: 1.25rem;
+
+    background-color: #076363;
+    color: #ffffff;
+
+    cursor: pointer;
+}
+
+.log-reg p
+{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.log-reg input
+{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.log-reg .pass-reset
+{
+    text-decoration: none;
+    color: #0a88d3;
+}
+.log-reg #error
+{
+    color: #ff0000;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 420px)
+{
+    .wrapper
+    {
+        background-image: none;
+    }
+    .log-reg
+    {
+        max-width:100vw;
+        min-height: 100vh;
+        padding: 0 15px;
+        margin: auto;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+    .log-reg form, .tab-menu
+    {
+        width: 90vw;
+    }
+}
+@media screen and (min-height: 1000px) /*IPad & Fold*/
+{
+    .wrapper
+    {
+        background-size: cover;
+    }
+    .log, .reg
+    {
+        margin: 15vh auto;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">
+        <title>Sign Up | Budgetin</title>
+        <meta name="description" content="Budgetin Registration Page">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/style-global.css">
+        <link rel="stylesheet" type="text/css" href="css/style-logreg.css">
+        <script type="text/javascript" src="js/panel-collapsed.js"></script>
+        <script defer type="text/javascript" src="js/validation-registration.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div id="collapsed-panel">
+                <button class="btn-close" onclick="hideCollapsed()">
+                    <img src="img/icons/btn-close.png" id="img-btn-close">
+                </button>
+                <a href="#header" class="nav-menu-active" onclick="hideCollapsed()">Home</a>
+                <a href="#promo-2" onclick="hideCollapsed()">FAQ</a>
+                <a href="#promo-1 " onclick="hideCollapsed()">About Us</a>
+                <a href="#copyright" onclick="hideCollapsed()">Contact</a>
+            </div>
+<!-- ----------------------------------------------HEADER-------------------------------------------------- -->            
+            <header>
+                <a href="landing.html" class="logo-header">BUDGETIN</a>
+                <button href="#" class="btn-collapse" onclick="showCollapsed()">
+                    <img src="img/icons/btn-collapse.png">
+                </button>
+                <div class="nav-and-reg">
+                    <nav class="nav-header">
+                        <ul>
+                            <li><a href="landing.html">Home</a></li>
+                            <li><a href="landing.html">FAQ </a></li>
+                            <li><a href="landing.html#promo-1">About Us</a></li>
+                            <li><a href="landing.html#copyright">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <button class="btn-signin" onclick="location.href='login.html'">Sign In</button>
+                </div>
+            </header>
+<!-- ----------------------------------------------CONTENT------------------------------------------------- -->
+            <div class="log-reg reg">
+                <div class="tab-menu">
+                    <a href="login.html">Log in</a>
+                    <a href="registration.html"  class="tab-menu-active">Join</a>
+                </div>                
+                <form id="form_registration" name="form_registration" autocomplete="off">
+                    <input type="text" id="fname" name="First name" placeholder="First name" class="input-text">
+                    <input type="text" id="lname" name="Last name" placeholder="Last name" class="input-text">
+                    <input type="date" id="birth" name="Birth date" placeholder="Date of birth" class="input-text">
+                    <input type="text" id="username" name="Username" placeholder="Username" class="input-text">
+                    <input type="text" id="email" name="Email address" placeholder="Email address" class="input-text">
+                    <input type="password" id="password" name="Password" placeholder="Password" class="input-text">
+                    <input type="submit" name="submit" class="btn-submit">
+                    <div id="error"></div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

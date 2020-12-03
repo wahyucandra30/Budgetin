@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">
+        <title>Welcome | Budgetin</title>
+        <meta name="description" content="Budgetin Landing Page">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/style-global.css">
+        <link rel="stylesheet" type="text/css" href="css/style-landing.css">
+        <script type="text/javascript" src="js/panel-collapsed.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div id="collapsed-panel">
+                <button class="btn-close" onclick="hideCollapsed()">
+                    <img src="img/icons/btn-close.png" id="img-btn-close">
+                </button>
+                <a href="landing.html" class="nav-menu-active" onclick="hideCollapsed()">Home</a>
+                <a href="#promo-2" onclick="hideCollapsed()">FAQ</a>
+                <a href="#promo-1 " onclick="hideCollapsed()">About Us</a>
+                <a href="#copyright" onclick="hideCollapsed()">Contact</a>
+            </div>
+<!-- ----------------------------------------------HEADER-------------------------------------------------- -->            
+            <header>
+                <a href="landing.html" class="logo-header">BUDGETIN</a>
+                <button href="#" class="btn-collapse" onclick="showCollapsed()">
+                    <img src="img/icons/btn-collapse.png">
+                </button>
+                <div class="nav-and-reg">
+                    <nav class="nav-header">
+                        <ul>
+                            <li><a href="#header" class="nav-menu-active">Home</a></li>
+                            <li><a href="#promo-2">FAQ </a></li>
+                            <li><a href="#promo-1">About Us</a></li>
+                            <li><a href="#copyright">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <button class="btn-signin" onclick="location.href='login.html'">Sign In</button>
+                </div>
+            </header>
+<!-- --------------------------------------------Background------------------------------------------------ -->
+            <img src="img/ss-1.jpg" id="img-bg-1">
+<!-- ----------------------------------------------CONTENT------------------------------------------------- -->
+            <div id="promo-1">
+                <h2 id="title-promo-1">BUDGETIN</h3  >
+                <h3 id="subtitle-promo-1">Financial Stability Within Your Grasp</h2>
+            </div>
+            <div id="about">
+                <h2 id="title-about">ABOUT US</h2>
+                <h3 id="subtitle-about">Lorem Ipsum Dolor sit Amet</h3>
+                <p id="paragraph-about">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Nostrum, eius necessitatibus ipsum ratione quia recusandae sapiente eveniet, 
+                    exercitationem at voluptate, minus similique vitae magni obcaecati tenetur 
+                    accusamus quos suscipit veritatis.
+                </p>
+            </div>
+            <div id="promo-2">
+                <h1 id="title-promo-2">FAQS</h1>
+                <h2 id="subtitle-promo-2">Lorem Ipsum Dolor sit Amet</h2>
+                <h3 id="question">LOREM IPSUM DOLOR SIT AMET CONSECTETUR, ADIPISICING ELIT?</h3>
+                <p id="answer">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Velit suscipit laboriosam facilis exercitationem nihil quo 
+                    cumque aliquid molestias ipsam ullam voluptates, magni dicta 
+                    dolore placeat quas doloribus sed impedit atque.
+                </p>
+
+                <h3 id="question">LOREM IPSUM DOLOR SIT AMET CONSECTETUR, ADIPISICING ELIT?</h3>  
+                <p id="answer">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Velit suscipit laboriosam facilis exercitationem nihil quo 
+                    cumque aliquid molestias ipsam ullam voluptates, magni dicta 
+                    dolore placeat quas doloribus sed impedit atque.
+                </p>
+                
+                <h3 id="question">LOREM IPSUM DOLOR SIT AMET CONSECTETUR, ADIPISICING ELIT?</h3>  
+                <p id="answer">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Velit suscipit laboriosam facilis exercitationem nihil quo 
+                    cumque aliquid molestias ipsam ullam voluptates, magni dicta 
+                    dolore placeat quas doloribus sed impedit atque.
+                </p>           
+            </div>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+            <footer id="copyright">
+                <p>© 2020 Kelompok 4 PABW Kelas E</p>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,243 @@
+.wrapper
+{
+    background-image: url(../img/ss-1.jpg);
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#img-bg-1
+{
+    width: 100%;
+    display: none;
+}
+
+#promo-1
+{
+    min-height: 245px;
+    margin-top: 85vh;
+    padding: 30px 0;
+    background-color: rgba(255, 255, 255, 0.45);
+    text-align: center;
+}
+#promo-1 #title-promo-1
+{
+    margin: 45px auto;
+
+    font-weight: 400;
+    font-size: 5rem;
+    color: #076363;
+}
+#promo-1 #subtitle-promo-1
+{
+    font-weight: 100;
+    font-size: 1.75rem;
+}
+
+#about
+{
+    min-height: 150px;
+    margin: 0;
+    padding: 80px 0 60px 0;
+    line-height: 2.5em;
+
+    background-color: #076363;
+    text-align: center;
+    color: #ffffff;
+}
+#about #title-about
+{
+    font-weight: lighter;
+    font-size: 3rem;
+}
+#about #subtitle-about
+{
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+#about #paragraph-about
+{
+    max-width: 60vw;
+    font-weight: lighter;
+    font-size: 1.25rem;
+    margin: 30px auto;
+}
+#promo-2
+{
+    min-height: 640px;
+    padding: 40px 0;
+    background-color:#ffffff;
+    text-align: center;
+}
+#promo-2 #title-promo-2
+{
+    margin: 80px auto 0;
+
+    font-weight: 400;
+    font-size: 3rem;
+    color: #076363;
+}
+#promo-2 #subtitle-promo-2
+{
+    margin-bottom: 100px;
+    font-weight: 100;
+    font-size: 1.75rem;
+}
+#promo-2 #question
+{
+    font-weight: lighter;
+    font-size: 1.75em;
+
+    color: #076363;
+}
+#promo-2 #answer
+{
+    max-width: 65vw;
+    margin: auto;
+}
+footer
+{
+    margin: 0;
+    min-height: 100px;
+    background-color: #d1d1d1;
+    text-align: center;
+}
+footer p
+{
+    margin: auto;
+    padding-top: 50px;
+}
+@media screen and (max-width: 420px) /*Mobile*/
+{
+    .wrapper
+    {
+        background-image: none;
+    }
+    #img-bg-1
+    {
+        display: inline-block;
+    }
+    #promo-1
+    {
+        min-height: 125px;
+        margin: 0;
+        text-align: left;
+    }
+    #promo-1 #title-promo-1
+    {
+        margin: 10px;
+    
+        font-weight: 100;
+        font-size: 3rem;
+    }
+    #promo-1 #subtitle-promo-1
+    {
+        margin: 10px;
+
+        font-weight: 100;
+        font-size: 1.2rem;
+    }
+    #about
+    {
+        margin: 0;
+        padding-top: 40px;
+        padding-left: 10px;
+    
+        text-align: left;
+    }
+    #about #title-about
+    {
+        font-weight: lighter;
+        font-size: 2.5rem;
+        margin: auto;
+    }
+    #about #subtitle-about
+    {
+        font-weight: lighter;
+        font-size: 1.25rem;
+    }
+    #about #paragraph-about
+    {
+        margin: 0;
+        max-width: 100%;
+        font-weight: lighter;
+        font-size: 1.25rem;
+    }
+    #promo-2
+    {
+        min-height: 80px;
+        margin: 0;
+        text-align: left;
+    }
+    #promo-2 #title-promo-2
+    {
+        margin: 10px;
+    
+        font-weight: 100;
+        font-size: 2rem;
+    }
+    #promo-2 #subtitle-promo-2
+    {
+        margin: 10px;
+
+        font-weight: 100;
+        font-size: 1.2rem;
+    }
+    #promo-2 #question
+    {
+        margin: 0 10px;
+        color: #076363;
+    }
+    #promo-2 #answer
+    {
+        max-width: 90vw;
+        margin: 40px 10px;
+    }
+}
+@media screen and (min-width: 421px)
+{
+    .wrapper
+    {
+        animation-name: main-slideshow;
+        animation-duration: 20s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        background-size: cover;
+    }
+    @keyframes main-slideshow
+    {
+        0%
+        {
+            background-image: url(../img/ss-1.jpg);
+            background-size: 1968px;
+        }
+        40%
+        {
+            background-image: url(../img/ss-1.jpg), url(../img/ss-2.jpg);
+            background-size: 2112px;
+        }
+        50%
+        {
+            background-image: url(../img/ss-2.jpg);
+            background-size: 2064px;
+        }
+        90%
+        {
+            background-image: url(../img/ss-2.jpg), url(../img/ss-1.jpg);
+            background-size: 1920px;
+        }
+        100%
+        {
+            background-image: url(../img/ss-1.jpg);
+            background-size: 1968px;
+        }
+    }
+}
+@media screen and (min-height: 1000px) /*IPad & Fold*/
+{
+    #promo-1
+    {
+        margin-top: 50vh;
+    }
+}
