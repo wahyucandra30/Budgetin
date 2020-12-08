@@ -1,0 +1,14 @@
+.btn-save
+{
+    padding: 0.6em;
+    box-sizing: border-box;
+    outline: none;
+    width: 100px;
+    border: 1px solid #d3d3d3;
+    font-size: 1.2rem;
+
+    background-color: #076363;
+    color: #ffffff;
+
+    cursor: pointer;
+}
