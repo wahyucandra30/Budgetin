@@ -1,0 +1,104 @@
+body, html
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    scroll-padding: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    background-color: #f0f0f0;
+}
+.wrapper
+{
+    width: 100%;
+}
+.container-sidebar
+{
+    max-width: 225px;
+    height: 100vh;
+    overflow: hidden;
+
+    background-color: #ffffff;
+    box-shadow: 0 200px 0 0 rgba(0, 0, 0, 1);
+}
+.container-sidebar-logo
+{
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.logo-sidebar
+{
+    margin-right: 5px;
+    font-size: 1.5em;
+    font-weight: normal;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+}
+.icons-sidebar
+{
+    max-width: 25px;
+    margin: 0 20px;
+    float: left;
+}
+.nav-and-acc
+{
+    width: 100%;
+}
+.nav-and-acc ul
+{
+    list-style-type: none;
+    padding: 0;
+}
+.nav-and-acc li
+{
+    margin-bottom: 5px;
+}
+.btn-sidebar
+{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-align: left;
+    background-color: #ffffff;
+    border: none;
+    color: #828282;
+    cursor: pointer;
+    outline: none;
+}
+.btn-sidebar-active
+{
+    color: #0a8080;
+    font-weight: 600;
+}
+
+.btn-sidebar:hover
+{
+    font-weight: 600;
+}
+@media screen and (max-width: 280px)
+{
+    
+}
+@media screen and (max-width: 340px)
+{
+    
+}
+@media screen and (max-width: 767px) 
+{
+    
+}
+
+@media screen and (min-width: 768px)
+{
+    
+}

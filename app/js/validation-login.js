@@ -31,7 +31,7 @@ function validateInput(currentEvent)
         currentUserData = new formInput(username.value, password.value)
         var test = "test"
         sessionStorage.setItem("currentUser", JSON.stringify(currentUserData));
-        window.location.href = "home.html"; //sementara
+        window.location.href = "dashboard.html"; //sementara
     }
 }
 class formInput
