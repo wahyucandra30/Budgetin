@@ -98,6 +98,11 @@
     color: #ff0000;
     font-weight: 500;
 }
+.log-reg #success
+{
+    color:#06af06;
+    font-weight: 500;
+}
 
 @media screen and (max-width: 420px)
 {

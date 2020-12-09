@@ -47,14 +47,15 @@
                     <a href="login.html">Log in</a>
                     <a href="registration.html"  class="tab-menu-active">Join</a>
                 </div>
-                <form id="form_registration" name="form_registration" method="POST" action="php/users.php" autocomplete="off">
-                    <input type="text" id="fname" name="First name" placeholder="First name" class="input-text">
-                    <input type="text" id="lname" name="Last name" placeholder="Last name" class="input-text">
-                    <input type="date" id="birth" name="Birth date" placeholder="Date of birth" class="input-text">
-                    <input type="text" id="username" name="Username" placeholder="Username" class="input-text">
-                    <input type="text" id="email" name="Email address" placeholder="Email address" class="input-text">
-                    <input type="password" id="password" name="Password" placeholder="Password" class="input-text">
+                <form id="form_registration" name="form_registration" action="php/users.php" method="POST" autocomplete="off">
+                    <input type="text" id="fname" name="fname" placeholder="First name" class="input-text">
+                    <input type="text" id="lname" name="lname" placeholder="Last name" class="input-text">
+                    <input type="date" id="birth" name="birth" placeholder="Date of birth" class="input-text">
+                    <input type="text" id="username" name="username" placeholder="Username" class="input-text">
+                    <input type="text" id="email" name="email" placeholder="Email address" class="input-text">
+                    <input type="password" id="password" name="password" placeholder="Password" class="input-text">
                     <input type="submit" name="submit" class="btn-submit">
+                    <div id="success"></div>
                     <div id="error"></div>
                 </form>
             </div>

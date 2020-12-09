@@ -30,7 +30,7 @@ function validateInput(currentEvent)
         if(inputs[i].value == "" || inputs[i].value == null)
         {
             console.log(inputs[i].value);
-            warning = inputs[i].getAttribute("name") + " " + "can't be empty";
+            warning = inputs[i].getAttribute("placeholder") + " " + "can't be empty";
         }
     }
 
@@ -42,8 +42,9 @@ function validateInput(currentEvent)
     else
     {
         currentEvent.preventDefault();
-        newUserData = new formInput(firstName.value, lastName.value,
-             birthDate.value, username.value, email.value, password.value);
+        //currentEvent.preventDefault();
+        // newUserData = new formInput(firstName.value, lastName.value,
+        //      birthDate.value, username.value, email.value, password.value);
 
         //TODO: Simpan ke database
         //window.location.href = "landing.html"; //nanti diganti ke layar registrasi berhasil
