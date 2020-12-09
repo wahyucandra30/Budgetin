@@ -15,6 +15,7 @@ $q = $connection->query($sql);
 if($q === TRUE){
     echo "<script type='text/javascript'>document.getElementById('error').innerText = '';</script>";
     echo "<script type='text/javascript'>document.getElementById('success').innerText = 'Successfully registered!';</script>";
+    header("Location:../");
 }
 else{
     echo "<script type='text/javascript'>document.getElementById('error').innerText = 'Registration failed!';</script>";

@@ -41,7 +41,6 @@ function validateInput(currentEvent)
     }
     else
     {
-        currentEvent.preventDefault();
         //currentEvent.preventDefault();
         // newUserData = new formInput(firstName.value, lastName.value,
         //      birthDate.value, username.value, email.value, password.value);
