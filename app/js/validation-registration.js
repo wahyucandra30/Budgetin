@@ -46,7 +46,7 @@ function validateInput(currentEvent)
              birthDate.value, username.value, email.value, password.value);
 
         //TODO: Simpan ke database
-        window.location.href = "landing.html"; //nanti diganti ke layar registrasi berhasil
+        //window.location.href = "landing.html"; //nanti diganti ke layar registrasi berhasil
     }
 }
 class formInput
