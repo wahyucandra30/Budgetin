@@ -38,6 +38,10 @@ body, html, .wrapper
     border-bottom: 1px solid #d3d3d3;
 }
 
+.content-right{
+    float: right;
+    margin-top: 0px;
+}
 .logo-sidebar
 {
     margin-right: 5px;
@@ -99,6 +103,7 @@ body, html, .wrapper
 .content-middle
 {
     width: 60%;
+    display: inline-block;
 }
 
 .container-content-title
@@ -156,6 +161,7 @@ form .div-r
 {
     margin-right: 0;
 }
+
 form label
 {
     font-size: 0.8em;
@@ -172,6 +178,7 @@ form .textfield
     background-color: #f0f0f0;
     outline: none;
 }
+
 @media screen and (max-width: 280px)
 {
     

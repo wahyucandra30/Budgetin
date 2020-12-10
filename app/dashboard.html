@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style-global-app.css">
         <link rel="stylesheet" type="text/css" href="css/style-app-dashboard.css">
+        <link rel="stylesheet" type="text/css" href="css/style-app-dashboard.css">
     </head>
     <body>
         <div class="wrapper">
@@ -56,7 +57,7 @@
             <p>BudGetIn.</p>
         </div>
         <div class="pane-content">
-            <table id="tabel" border="0" cellpadding="10" cellspacing="0">
+            <table id="tabel1" border="0" cellpadding="10" cellspacing="0">
 
                 <tr>
                     <th id="income">Income</th>
@@ -65,17 +66,131 @@
                 </tr>
             
                 <tr id=>
-                    <td>Paycheck 1</td>
+                    <td id="tes">Gaji Bulanan 1</td>
                     <td>Rp 5.000.000</td>
                     <td>Rp 0</td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>Paycheck 2</td>
-                    <td>Rp 3.000.000</td>
+                    <td id="tes">Gaji Bulanan 2</td>
+                    <td>Rp 5.000.000</td>
                     <td>Rp 0</td>
                 </tr>
             </table>
+            <input type="submit" class="btn-add" value="Add Income">
+        </div>
+
+        <div class="pane-content">
+            <table id="tabel1" border="0" cellpadding="10" cellspacing="0">
+
+                <tr>
+                    <th id="income">Transportation</th>
+                    <th id="plan">Planned</th>
+                    <th id="received">Remaining</th>
+                </tr>
+            
+                <tr>
+                    <td id="tes">Bensin</td>
+                    <td>Rp 500.000</td>
+                    <td>Rp 500.000</td>
+                    <td></td>
+                </tr>
+            </table>
+            <input type="submit" class="btn-add" value="Add Item">
+        </div>
+
+        <div class="pane-content">
+            <table id="tabel1" border="0" cellpadding="10" cellspacing="0">
+
+                <tr>
+                    <th id="income">Electric Bill</th>
+                    <th id="plan">Planned</th>
+                    <th id="received">Remaining</th>
+                </tr>
+            
+                <tr>
+                    <td id="tes">Bayar listrik</td>
+                    <td>Rp 750.000</td>
+                    <td>Rp 750.000</td>
+                    <td></td>
+                </tr>
+            </table>
+            <input type="submit" class="btn-add" value="Add Item">
+        </div>
+
+        <div class="pane-content">
+            <table id="tabel1" border="0" cellpadding="10" cellspacing="0">
+
+                <tr>
+                    <th id="income">Health</th>
+                    <th id="plan">Planned</th>
+                    <th id="received">Remaining</th>
+                </tr>
+            
+                <tr>
+                    <td id="tes">Beli Obat</td>
+                    <td>Rp 500.000</td>
+                    <td>Rp 500.000</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td id="tes">Bayar Rumah Sakit</td>
+                    <td>Rp 500.000</td>
+                    <td>Rp 500.000</td>
+                </tr>
+                
+                <tr>
+                    <td id="tes">Bayar BPJS</td>
+                    <td>Rp 500.000</td>
+                    <td>Rp 500.000</td>
+                </tr>
+            </table>
+            <input type="submit" class="btn-add" value="Add Item">
+        </div>
+
+        <div class="pane-content">
+            <table id="tabel1" border="0" cellpadding="10" cellspacing="0">
+
+                <tr>
+                    <th id="income">Debt</th>
+                    <th id="plan">Planned</th>
+                    <th id="received">Remaining</th>
+                </tr>
+            
+                <tr>
+                    <td id="tes">Bayar Utang Bahan Bangunan</td>
+                    <td>Rp 250.000</td>
+                    <td>Rp 250.000</td>
+                    <td></td>
+                </tr>
+            </table>
+            <input type="submit" class="btn-add" value="Add Item">
+        </div>
+
+        <div class="pane-content">
+            <table id="tabel1" border="0" cellpadding="10" cellspacing="0">
+
+                <tr>
+                    <th id="income">Food</th>
+                    <th id="plan">Planned</th>
+                    <th id="received">Remaining</th>
+                </tr>
+            
+                <tr>
+                    <td id="tes">Beli Sembako</td>
+                    <td>Rp 1.000.000</td>
+                    <td>Rp 1.000.000</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td id="tes">Beli Makanan</td>
+                    <td>Rp 1.000.000</td>
+                    <td>Rp 1.000.000</td>
+                </tr>
+            </table>
+            <input type="submit" class="btn-add" value="Add Item">
         </div>
 
     </div>
@@ -84,14 +199,39 @@
             <img src="img/piechart.png" id="img-piechart">
             <table>
                 <tr>
-                    <td>Planned</td>
-                    <td>Spent</td>
-                    <td>Remaining</td>
+                    <th id="plan2">Planned</th>
+                    <th id="spent">Spent</th>
+                    <th id="remain">Remaining</th>
                 </tr>
 
                 <tr>
-                    <td>das</td>
-                    <br><br><br><br><br><br><br><br><br><br><br><br>
+                    <td id="var">Transportation</td>
+                    <td>Rp 500.000</td>
+                    <td id="persen">10%</td>
+                </tr>
+
+                <tr>
+                    <td id="var">Electric Bill</td>
+                    <td>Rp 750.000</td>
+                    <td id="persen">15%</td>
+                </tr>
+
+                <tr>
+                    <td id="var">Health</td>
+                    <td>Rp 1.500.000</td>
+                    <td id="persen">30%</td>
+                </tr>
+
+                <tr>
+                    <td id="var">Debt</td>
+                    <td>Rp 250.000</td>
+                    <td id="persen">5%</td>
+                </tr>
+
+                <tr>
+                    <td id="var">Food</td>
+                    <td>Rp 2.000.000</td>
+                    <td id="persen">40%</td>
                 </tr>
             </table>
         </div>

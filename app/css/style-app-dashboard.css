@@ -1,15 +1,49 @@
 table tr #income
 { 
-    padding-right: 450px;
+    width: 100%;
+    padding-right: 150px;
     border-bottom: 1px solid #d3d3d3;
 }
 table tr #plan
 { 
+    width: 100%;
+    padding-right: 70px;
     border-bottom: 1px solid #d3d3d3;
 }
 table tr #received
 { 
+    width: 100%;
+    padding-right: 50px;
     border-bottom: 1px solid #d3d3d3;
+}
+
+table tr #tes{
+    padding-left: 30px;
+}
+
+table tr #plan2{
+    text-decoration: underline;
+    padding-right: 100px;
+    padding-left: 20px;
+}
+
+table tr #spent{
+    text-decoration: underline;
+    padding-right: 80px;
+}
+
+table tr #remain{
+    text-decoration: underline;
+    float: right;
+}
+
+table tr #var{
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+table tr #persen{
+    text-align: center;
 }
 
 table{
@@ -18,4 +52,21 @@ table{
 
 #img-piechart{
     max-width: 500px;
+}
+
+.btn-add
+{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 0.6em;
+    box-sizing: border-box;
+    outline: none;
+    width: 100px;
+    border: 1px solid #d3d3d3;
+    font-size: 1.1rem;
+
+    background-color: #076363;
+    color: #ffffff;
+
+    cursor: pointer;
 }
