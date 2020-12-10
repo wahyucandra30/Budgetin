@@ -18,19 +18,11 @@ if ($userQuery->num_rows > 0) {
     }
     else
     {
-        $fname = $row["first_name"];
-        $lname = $row["last_name"];
-        $birth = $row["birth_date"];
-        $email = $row["email_address"];
+        $id = $row["account_id"];
 
         session_start();
         
-        $_SESSION["currentfname"] = $fname;
-        $_SESSION["currentlname"] = $lname;
-        $_SESSION["currentbirth"] = $birth;
-        $_SESSION["currentusername"] = $username;
-        $_SESSION["currentemail"] = $email;
-        $_SESSION["currentpassword"] = $username;
+        $_SESSION["currentid"] = $id;
         
         header("Location:../dashboard.html");
     }

@@ -1,3 +1,25 @@
+<?php
+    include 'phpscripts/connect.php';
+
+    session_start();
+
+    $id = $_SESSION['currentid'];
+
+    $selectUser = "SELECT * FROM `users` WHERE `account_id` = '$id'";
+
+    $userQuery = $connection->query($selectUser);
+
+    if ($userQuery->num_rows > 0) {
+        $row = $userQuery->fetch_assoc();
+        
+        $fname = $row['first_name'];
+        $lname = $row['last_name'];
+        $birth = $row['birth_date'];
+        $email = $row['email_address'];
+        $username = $row['username'];
+        $password = $row['password'];
+    }
+?>
 <!DOCTYPE html>
 
 <html>
@@ -10,6 +32,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style-global-app.css">
         <link rel="stylesheet" type="text/css" href="css/style-app-acc.css">
+        <script defer type="text/javascript" src="js/validation-edit.js"></script>
     </head>
     <body>
         <div class="wrapper">
@@ -57,42 +80,48 @@
                     </div>
                     <div class="pane-content">
                         <h2>Personal Information</h2>
-                        <form id="form_personal" name="form_personal" autocomplete="off">
+                        <form id="form_personal" action="phpscripts/users_edit_personal.php" method="POST" name="form_personal" autocomplete="off">
                             <ul>
                                 <li>
                                     <div class="div-l">
                                         <label>First Name</label>
-                                        <input type="text" id="fname" placeholder="First name" class="textfield">
+                                            <input type="text" value="<?php echo ($fname); ?>" id="fname" name="fname" placeholder="First name" class="textfield">
                                     </div>
                                     <div class="div-r">
                                         <label>Last Name</label>
-                                        <input type="text" id="lname" placeholder="Last name" class="textfield">                                        
+                                        <input type="text" value="<?php echo ($lname); ?>" id="lname" name="lname" placeholder="Last name" class="textfield">                                        
                                     </div>
                                 </li>
                                 <li>
                                     <label>Date of Birth</label>
-                                    <input type="date" id="birth" placeholder="Date of birth" class="textfield">
+                                    <input type="date" value="<?php echo ($birth); ?>" id="birth" name="birth" placeholder="Date of birth" class="textfield">
                                 </li>
                                 <li>
                                     <input type="submit" class="btn-save" value="Apply">
+                                    <div id="error1"></div>
                                 </li>
                             </ul>
                         </form>
                     </div>
                     <div class="pane-content">
                         <h2>Account Details</h2>
-                        <form id="form_account" name="form_account" autocomplete="off">
+                        <form id="form_account" action="phpscripts/users_edit_account.php" method="POST" name="form_account" autocomplete="off">
                             <ul>
                                 <li>
                                     <label>Email Address</label>
-                                    <input type="text" id="email" placeholder="Email address" class="textfield">
+                                    <input type="text" value="<?php echo ($email); ?>" id="email" placeholder="Email address" class="textfield">
+                                </li>
+                                <li>
+                                    <label>Username</label>
+                                    <input type="text" value="<?php echo ($username); ?>" id="username" placeholder="Username" class="textfield">
                                 </li>
                                 <li>
                                     <label>Password</label>
-                                    <input type="password" id="password" placeholder="Password" class="textfield">
+                                    <input type="password" value="<?php echo ($password); ?>" id="password" placeholder="Password" class="textfield">
                                 </li>
                                 <li>
                                     <input type="submit" class="btn-save" value="Apply">
+                                    <div id="error2"></div>
                                 </li>
                             </ul>
                         </form>

@@ -12,3 +12,13 @@
 
     cursor: pointer;
 }
+#error1
+{
+    color: #ff0000;
+    font-weight: 500;
+}
+#error2
+{
+    color: #ff0000;
+    font-weight: 500;
+}
