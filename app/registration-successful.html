@@ -4,13 +4,12 @@
         <meta charset="utf-8">
         <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
         <link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">
-        <title>Sign Up | Budgetin</title>
-        <meta name="description" content="Budgetin Registration Page">
+        <title>Registration Successful | Budgetin</title>
+        <meta name="description" content="Budgetin Registration Successful Page">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style-global.css">
         <link rel="stylesheet" type="text/css" href="css/style-logreg.css">
         <script type="text/javascript" src="js/panel-collapsed.js"></script>
-        <script defer type="text/javascript" src="js/validation-registration.js"></script>
     </head>
     <body>
         <div class="wrapper">
@@ -42,21 +41,10 @@
                 </div>
             </header>
 <!-- ----------------------------------------------CONTENT------------------------------------------------- -->
-            <div class="log-reg reg">
-                <div class="tab-menu">
-                    <a href="login.html">Log in</a>
-                    <a href="registration.html"  class="tab-menu-active">Join</a>
-                </div>
-                <form id="form_registration" name="form_registration" action="php/users-insert.php" method="POST" autocomplete="off">
-                    <input type="text" id="fname" name="fname" placeholder="First name" class="input-text">
-                    <input type="text" id="lname" name="lname" placeholder="Last name" class="input-text">
-                    <input type="date" id="birth" name="birth" placeholder="Date of birth" class="input-text">
-                    <input type="text" id="username" name="username" placeholder="Username" class="input-text">
-                    <input type="text" id="email" name="email" placeholder="Email address" class="input-text">
-                    <input type="password" id="password" name="password" placeholder="Password" class="input-text">
-                    <input type="submit" name="submit" class="btn-submit">
-                    <div id="error"></div>
-                </form>
+            <div class="log-reg regdone">
+                <img src="img/icons/checkmark.png" id="img-checkmark">
+                <h1 id="title-regdone">Registration Successful!</h1>
+                <h3 id="subtitle-regdone">You can now sign in to your new account.</h3>
             </div>
         </div>
     </body>

@@ -27,11 +27,7 @@ function validateInput(currentEvent)
     }
     else
     {
-        currentEvent.preventDefault();
-        currentUserData = new formInput(username.value, password.value)
-        var test = "test"
-        sessionStorage.setItem("currentUser", JSON.stringify(currentUserData));
-        window.location.href = "dashboard.html"; //sementara
+        sessionStorage.setItem("currentUsername", username);
     }
 }
 class formInput

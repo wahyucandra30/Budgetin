@@ -26,6 +26,29 @@
 {
     margin: 5vh auto 40px;
 }
+.regdone
+{
+    max-width: 600px;
+    max-height: 600px;
+    margin: 13vh auto 40px;
+    text-align: center;
+}
+#img-checkmark
+{
+    margin: 50px auto 0;
+    max-width: 200px;
+}
+#title-regdone
+{
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+#subtitle-regdone
+{
+    margin-top: 5px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
 .tab-menu
 {
     border-bottom: 1px solid #d2d2d2;
@@ -130,7 +153,7 @@
     {
         background-size: cover;
     }
-    .log, .reg
+    .log, .reg, .done
     {
         margin: 15vh auto;
     }

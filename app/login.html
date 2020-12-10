@@ -47,7 +47,7 @@
                     <a href="login.html" class="tab-menu-active">Log in</a>
                     <a href="registration.html">Join</a>
                 </div>                
-                <form id="form_login" autocomplete="off">
+                <form id="form_login" action="php/users-validation.php" method="POST" autocomplete="off">
                     <input type="text" id="username" name="username" placeholder="Username" class="input-text">
                     <input type="password" id="password" name="password" placeholder="Password" class="input-text">
                     <input type="submit" value="Log In" name="submit" class="btn-submit">

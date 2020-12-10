@@ -39,15 +39,6 @@ function validateInput(currentEvent)
         currentEvent.preventDefault();
         errorElement.innerText = warning;
     }
-    else
-    {
-        //currentEvent.preventDefault();
-        // newUserData = new formInput(firstName.value, lastName.value,
-        //      birthDate.value, username.value, email.value, password.value);
-
-        //TODO: Simpan ke database
-        //window.location.href = "landing.html"; //nanti diganti ke layar registrasi berhasil
-    }
 }
 class formInput
 {

@@ -13,12 +13,9 @@ $sql = "INSERT INTO users (first_name, last_name, birth_date, username, email_ad
 $q = $connection->query($sql);
 
 if($q === TRUE){
-    echo "<script type='text/javascript'>document.getElementById('error').innerText = '';</script>";
-    echo "<script type='text/javascript'>document.getElementById('success').innerText = 'Successfully registered!';</script>";
-    header("Location:../");
+    header("Location:../registration-successful.html");
 }
 else{
-    echo "<script type='text/javascript'>document.getElementById('error').innerText = 'Registration failed!';</script>";
     echo $connection->error;
 }
 ?>
