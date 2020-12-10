@@ -1,0 +1,21 @@
+table tr #income
+{ 
+    padding-right: 450px;
+    border-bottom: 1px solid #d3d3d3;
+}
+table tr #plan
+{ 
+    border-bottom: 1px solid #d3d3d3;
+}
+table tr #received
+{ 
+    border-bottom: 1px solid #d3d3d3;
+}
+
+table{
+    max-width: 100%;
+}
+
+#img-piechart{
+    max-width: 500px;
+}
