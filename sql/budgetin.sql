@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2020 at 08:35 PM
+-- Generation Time: Dec 11, 2020 at 12:07 AM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -29,11 +29,27 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `transactions` (
   `transaction_id` int(255) NOT NULL,
-  `name` varchar(1000) NOT NULL,
+  `name` varchar(1000) NOT NULL DEFAULT 'New Transaction',
   `type` varchar(1000) NOT NULL,
   `total_expense` int(255) NOT NULL,
-  `total_income` int(11) NOT NULL
+  `total_income` int(255) NOT NULL,
+  `date_added` date NOT NULL DEFAULT current_timestamp(),
+  `account_id` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `transactions`
+--
+
+INSERT INTO `transactions` (`transaction_id`, `name`, `type`, `total_expense`, `total_income`, `date_added`, `account_id`) VALUES
+(1, 'Electric', 'Bill', 500000, 0, '2020-12-11', 1),
+(2, 'Bus Ride', 'Transportation', 15750, 0, '2020-12-11', 1),
+(3, 'Top Up ML', 'Other', 5000000, 0, '2020-12-11', 2),
+(4, 'Monthly Salary', 'Salary', 0, 20000000, '2020-12-11', 1),
+(5, 'Internet Bill', 'Bill', 400000, 0, '2020-12-11', 1),
+(6, 'Martabak', 'Food', 15000, 0, '2020-12-11', 4),
+(7, 'Train Ride', 'Transportation', 80000, 0, '2020-12-11', 4),
+(8, 'Test', 'Food', 0, 0, '2020-12-11', 5);
 
 -- --------------------------------------------------------
 
@@ -70,7 +86,8 @@ INSERT INTO `users` (`account_id`, `first_name`, `last_name`, `birth_date`, `use
 -- Indexes for table `transactions`
 --
 ALTER TABLE `transactions`
-  ADD PRIMARY KEY (`transaction_id`);
+  ADD PRIMARY KEY (`transaction_id`),
+  ADD KEY `account_id` (`account_id`);
 
 --
 -- Indexes for table `users`
@@ -87,13 +104,23 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `transaction_id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `transaction_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `account_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `transactions`
+--
+ALTER TABLE `transactions`
+  ADD CONSTRAINT `transactions_ibfk_1` FOREIGN KEY (`account_id`) REFERENCES `users` (`account_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
