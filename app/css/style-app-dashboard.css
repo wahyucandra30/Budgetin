@@ -1,3 +1,7 @@
+table
+{
+    max-width: 100%;
+}
 table tr #income
 { 
     width: 100%;
@@ -23,8 +27,7 @@ table tr #tes{
 
 table tr #plan2{
     text-decoration: underline;
-    padding-right: 100px;
-    padding-left: 20px;
+    padding-left: 0;
 }
 
 table tr #spent{
@@ -51,7 +54,7 @@ table{
 }
 
 #img-piechart{
-    max-width: 500px;
+    max-width: 100%;
 }
 
 .btn-add
