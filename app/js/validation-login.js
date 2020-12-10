@@ -13,11 +13,11 @@ function validateInput(currentEvent)
     let warning;
     if(username.value == "" || username.value == null)
     {
-        warning = "Username can't be empty";
+        warning = "Username can't be empty!";
     }
     else if(password.value == "" || password.value == null)
     {
-        warning = "Password can't be empty";
+        warning = "Password can't be empty!";
     }
 
     if(warning != null)

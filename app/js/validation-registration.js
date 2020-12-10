@@ -30,7 +30,7 @@ function validateInput(currentEvent)
         if(inputs[i].value == "" || inputs[i].value == null)
         {
             console.log(inputs[i].value);
-            warning = inputs[i].getAttribute("placeholder") + " " + "can't be empty";
+            warning = inputs[i].getAttribute("placeholder") + " " + "can't be empty!";
         }
     }
 

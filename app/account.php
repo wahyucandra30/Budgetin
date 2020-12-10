@@ -109,15 +109,15 @@
                             <ul>
                                 <li>
                                     <label>Email Address</label>
-                                    <input type="text" value="<?php echo ($email); ?>" id="email" placeholder="Email address" class="textfield">
+                                    <input type="text" value="<?php echo ($email); ?>" id="email" name="email" placeholder="Email address" class="textfield">
                                 </li>
                                 <li>
                                     <label>Username</label>
-                                    <input type="text" value="<?php echo ($username); ?>" id="username" placeholder="Username" class="textfield">
+                                    <input type="text" value="<?php echo ($username); ?>" id="username" name="username" placeholder="Username" class="textfield">
                                 </li>
                                 <li>
                                     <label>Password</label>
-                                    <input type="password" value="<?php echo ($password); ?>" id="password" placeholder="Password" class="textfield">
+                                    <input type="password" value="<?php echo ($password); ?>" id="password" name="password" placeholder="Password" class="textfield">
                                 </li>
                                 <li>
                                     <input type="submit" class="btn-save" value="Apply">

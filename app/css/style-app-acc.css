@@ -12,13 +12,11 @@
 
     cursor: pointer;
 }
-#error1
+#error1, #error2
 {
     color: #ff0000;
     font-weight: 500;
-}
-#error2
-{
-    color: #ff0000;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-left: 10px;
 }
