@@ -24,7 +24,7 @@ if ($userQuery->num_rows > 0) {
         
         $_SESSION["currentid"] = $id;
         
-        header("Location:../dashboard.html");
+        header("Location:../dashboard.php");
     }
 }
 else{

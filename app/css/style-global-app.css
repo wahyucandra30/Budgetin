@@ -113,6 +113,10 @@ body, html, .wrapper
     border-bottom: 1px solid #d3d3d3;
     margin-bottom: 20px;
 }
+.container-content-data
+{
+    width: 85%;
+}
 .container-content h2
 {
     font-size: 2em;
@@ -136,17 +140,28 @@ body, html, .wrapper
 }
 .pane-content h2
 {
+    width: 100%;
     margin: 0 40px;
     padding-bottom: 20px;
     font-size: 1.7rem;
     border-bottom: 1px solid #d3d3d3;
 }
-
+.pane-content h3
+{
+    width: 100%;
+    margin: 0 40px;
+    padding-top: 20px;
+    font-size: 1.4rem;
+}
+.unbold
+{
+    font-weight: normal;
+}
 ul
 {
     list-style: none;
 }
-#no-indent
+.list-transactions
 {
     padding-left: 0;
 }

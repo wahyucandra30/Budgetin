@@ -44,7 +44,7 @@
                 <div class="nav-and-acc">
                     <ul>
                         <li>
-                            <button onclick="location.href='dashboard.html'" class="btn-sidebar">
+                            <button onclick="location.href='dashboard.php'" class="btn-sidebar">
                                 <img src="img/icons/bar-chart.png" class="icons-sidebar">Dashboard</a>
                             </button>
                         </li>

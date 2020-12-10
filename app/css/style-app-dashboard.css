@@ -1,55 +1,44 @@
-table
+#tb-transaction
 {
-    max-width: 100%;
-}
-table tr #income
-{ 
     width: 100%;
-    padding-right: 150px;
+    margin: 0 40px;
+}
+#tb-transaction tr .type
+{ 
+    width: 50%;
     border-bottom: 1px solid #d3d3d3;
 }
-table tr #plan
-{ 
-    width: 100%;
-    padding-right: 70px;
-    border-bottom: 1px solid #d3d3d3;
-}
-table tr #received
-{ 
-    width: 100%;
-    padding-right: 50px;
+#tb-transaction tr .income, .expense
+{
+    max-width: 20%;
     border-bottom: 1px solid #d3d3d3;
 }
 
-table tr #tes{
-    padding-left: 30px;
-}
-
-table tr #plan2{
+/* #tb-transaction tr #plan2{
     text-decoration: underline;
     padding-left: 0;
 }
 
-table tr #spent{
+#tb-transaction tr #spent{
     text-decoration: underline;
     padding-right: 80px;
 }
 
-table tr #remain{
+#tb-transaction tr #remain{
     text-decoration: underline;
     float: right;
 }
 
-table tr #var{
+#tb-transaction tr #var{
     padding-left: 20px;
     padding-top: 15px;
 }
 
-table tr #persen{
+#tb-transaction tr #persen{
     text-align: center;
 }
 
-table{
+#tb-transaction{
     max-width: 100%;
 }
 
@@ -72,4 +61,4 @@ table{
     color: #ffffff;
 
     cursor: pointer;
-}
+} */

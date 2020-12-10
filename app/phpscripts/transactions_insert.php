@@ -5,15 +5,15 @@ $name = $_POST['name'];
 $type = $_POST['type'];
 $income = $_POST['income'];
 $expense = $_POST['expense'];
-$email = $_POST['email'];
-$password = $_POST['password'];
+session_start();
+$id = $_SESSION['currentid'];
 
-$sql = "INSERT INTO users (first_name, last_name, birth_date, username, email_address, password)
-        Values ('$fname', '$lname', '$birth', '$username', '$email', '$password')";
+$sql = "INSERT INTO transactions (name, type, total_income, total_expense, account_id)
+        Values ('$name', '$type', '$income', '$expense', '$id')";
 $q = $connection->query($sql);
 
 if($q === TRUE){
-    header("Location:../registration-successful.html");
+    header("Location:../dashboard.php");
 }
 else{
     echo $connection->error;
