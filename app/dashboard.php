@@ -99,6 +99,7 @@
             <h2>Dashboard</h2>
             <p>Overview of your transactions.</p>
         </div>
+        <h2><?php if($userQuery->num_rows == 0){echo "You haven't made any transactions.";}?></h2>
         <ul class="list-transactions">
             <?php foreach($addedPanes as $display){echo $display;} ?>
         </ul>

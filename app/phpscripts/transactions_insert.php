@@ -2,6 +2,10 @@
 include 'connect.php';
 
 $name = $_POST['name'];
+if($name == NULL)
+{
+    $name = "New Transaction";
+}
 $type = $_POST['type'];
 $income = $_POST['income'];
 $expense = $_POST['expense'];
