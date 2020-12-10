@@ -74,7 +74,9 @@
                         <p>View and edit your registered account information.</p>
                     </div>
                     <div class="pane-content">
-                        <h2>Personal Information</h2>
+                        <div class="container-content-data">
+                            <h2>Personal Information</h2>
+                        </div>
                         <form id="form_personal" action="phpscripts/users_edit_personal.php" method="POST" name="form_personal" autocomplete="off">
                             <ul>
                                 <li>
@@ -99,7 +101,9 @@
                         </form>
                     </div>
                     <div class="pane-content">
-                        <h2>Account Details</h2>
+                        <div class="container-content-data">
+                            <h2>Account Details</h2>
+                        </div>
                         <form id="form_account" action="phpscripts/users_edit_account.php" method="POST" name="form_account" autocomplete="off">
                             <ul>
                                 <li>
