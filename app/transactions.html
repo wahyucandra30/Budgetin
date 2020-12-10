@@ -9,6 +9,9 @@
         <meta name="description" content="Budgetin Transactions Page">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style-global-app.css">
+        <link rel="stylesheet" type="text/css" href="css/style-app-transactions.css">
+        <script src="js/jquery-min3.5.1.js"></script>
+        <script src="js/add-transaction.js"></script>
     </head>
     <body>
         <div class="wrapper">
@@ -35,7 +38,7 @@
                             </button>
                         </li>
                         <li>
-                            <button onclick="location.href='account.html'" class="btn-sidebar">
+                            <button onclick="location.href='account.php'" class="btn-sidebar">
                                 <img src="img/icons/user.png" class="icons-sidebar">Account</a>
                             </button>
                         </li>
@@ -46,6 +49,18 @@
                         </li>
                     </ul>
                 </div>                
+            </div>
+            <div class="container-content">
+                <div class="content-middle">
+                    <div class="container-content-title">
+                        <h2>Transactions</h2>
+                        <p>View and add to your transactions history.</p>
+                    </div>
+                    <ul id="no-indent">
+                        
+                    </ul>
+                    <button class="btn-add" onclick=""><h2>+</h2></div>
+                </div>
             </div>
             
         </div>

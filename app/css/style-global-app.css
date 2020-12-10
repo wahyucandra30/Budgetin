@@ -141,9 +141,17 @@ body, html, .wrapper
     border-bottom: 1px solid #d3d3d3;
 }
 
-form ul
+ul
 {
     list-style: none;
+}
+#no-indent
+{
+    padding-left: 0;
+}
+form ul
+{
+    margin-top: 20px;
 }
 form li
 {
@@ -159,6 +167,7 @@ form .div-l
 }
 form .div-r
 {
+    vertical-align: top;
     margin-right: 0;
 }
 

@@ -85,7 +85,7 @@
                                 <li>
                                     <div class="div-l">
                                         <label>First Name</label>
-                                            <input type="text" value="<?php echo ($fname); ?>" id="fname" name="fname" placeholder="First name" class="textfield">
+                                        <input type="text" value="<?php echo ($fname); ?>" id="fname" name="fname" placeholder="First name" class="textfield">
                                     </div>
                                     <div class="div-r">
                                         <label>Last Name</label>
