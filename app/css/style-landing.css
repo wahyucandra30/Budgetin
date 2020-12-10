@@ -95,6 +95,12 @@
     max-width: 65vw;
     margin: auto;
 }
+#promo-2 #disclaimer
+{
+    max-width: 65vw;
+    margin: 60px auto;
+    font-style: italic;
+}
 footer
 {
     margin: 0;
