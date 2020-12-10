@@ -49,13 +49,8 @@
                             </button>
                         </li>
                         <li>
-                            <button onclick="location.href='transactions.html'" class="btn-sidebar">
-                                <img src="img/icons/payment.png" class="icons-sidebar">Transactions</a>
-                            </button>
-                        </li>
-                        <li>
-                            <button onclick="location.href='journal.html'" class="btn-sidebar">
-                                <img src="img/icons/journal.png" class="icons-sidebar">Journal</a>
+                            <button onclick="location.href='transaction.html'" class="btn-sidebar">
+                                <img src="img/icons/payment.png" class="icons-sidebar">Transaction</a>
                             </button>
                         </li>
                         <li>
