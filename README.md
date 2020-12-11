@@ -12,18 +12,18 @@ PANDUAN CARA MENJALANKAN:
 
 
 Daftar halaman sementara:
--Landing Page: Halaman pertama yang ditampilkan saat belum log in
--Log In Page: Halaman log in
--Sign Up Page: Halaman sign up
--Dashboard: Menampilkan daftar transaksi yang dimiliki user
--Transasction: Menambah transaksi baru ke database
--Account: Menampilkan dan bisa menyunting data user
+- Landing Page: Halaman pertama yang ditampilkan saat belum log in
+- Log In Page: Halaman log in
+- Sign Up Page: Halaman sign up
+- Dashboard: Menampilkan daftar transaksi yang dimiliki user
+- Transasction: Menambah transaksi baru ke database
+- Account: Menampilkan dan bisa menyunting data user
 
 Daftar fungsionalitas sementara:
--Simpan data registrasi akun ke database
--Validasi log in dengan mencari apakah username yang dimasukkan ada di database dan password yang dimasukkan benar
--Menambah transaksi pada halaman Transaction ke tabel database daftar transaksi yang dihubungkan ke tabel database daftar user dengan foreign key id user.
--Menampilkan pie chart berdasarkan data dari tabel database daftar transaksi
--Menambah elemen baru pada halaman Dashboard berdasarkan tabel database daftar transaksi
--Menampilkan data user dari tabel database daftar user
--Mengedit data user pada tabel database daftar user
+- Simpan data registrasi akun ke database
+- Validasi log in dengan mencari apakah username yang dimasukkan ada di database dan password yang dimasukkan benar
+- Menambah transaksi pada halaman Transaction ke tabel database daftar transaksi yang dihubungkan ke tabel database daftar user dengan foreign key id user.
+- Menampilkan pie chart berdasarkan data dari tabel database daftar transaksi
+- Menambah elemen baru pada halaman Dashboard berdasarkan tabel database daftar transaksi
+- Menampilkan data user dari tabel database daftar user
+- Mengedit data user pada tabel database daftar user
