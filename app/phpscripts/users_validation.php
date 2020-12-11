@@ -11,10 +11,14 @@ $userQuery = $connection->query($selectUser);
 if ($userQuery->num_rows > 0) {
     $row = $userQuery->fetch_assoc();
     $correctPassword = $row["password"];
+    session_start();
+    $_SESSION["userfound"] = TRUE;
 
     if($password != $correctPassword)
     {
-         echo("Salah pass");
+        session_start();
+        $_SESSION["passwordiscorrect"] = FALSE;
+        header("Location:../login.php");
     }
     else
     {
@@ -23,11 +27,14 @@ if ($userQuery->num_rows > 0) {
         session_start();
         
         $_SESSION["currentid"] = $id;
+        $_SESSION["passwordiscorrect"] = TRUE;
         
         header("Location:../dashboard.php");
     }
 }
 else{
-    echo "Bruh";
+    session_start();
+    $_SESSION["userfound"] = FALSE;
+    header("Location:../login.php");
 }
 ?>

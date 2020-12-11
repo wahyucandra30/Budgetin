@@ -1,3 +1,23 @@
+<?php 
+    session_start();
+
+    if(isset($_SESSION['passwordiscorrect']))
+    {
+        $validpass = $_SESSION['passwordiscorrect'];
+    }
+    else
+    {
+        $validpass = TRUE;
+    }
+    if(isset($_SESSION['userfound']))
+    {
+        $ufound = $_SESSION['userfound'];
+    }
+    else
+    {
+        $ufound = TRUE;
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -38,20 +58,20 @@
                             <li><a href="#copyright">Contact</a></li>
                         </ul>
                     </nav>
-                    <button class="btn-signin" onclick="location.href='login.html'">Sign In</button>
+                    <button class="btn-signin" onclick="location.href='login.php'">Sign In</button>
                 </div>
             </header>
 <!-- ----------------------------------------------CONTENT------------------------------------------------- -->
             <div class="log-reg log">
                 <div class="tab-menu">
-                    <a href="login.html" class="tab-menu-active">Log in</a>
+                    <a href="login.php" class="tab-menu-active">Log in</a>
                     <a href="registration.html">Join</a>
                 </div>                
                 <form id="form_login" action="phpscripts/users_validation.php" method="POST" autocomplete="off">
                     <input type="text" id="username" name="username" placeholder="Username" class="input-text">
                     <input type="password" id="password" name="password" placeholder="Password" class="input-text">
                     <input type="submit" value="Log In" name="submit" class="btn-submit">
-                    <div id="error"></div>
+                    <div id="error"><?php if(!$validpass || !$ufound){echo "The username or password you entered is incorrect!";}?></div>
                 </form>
             </div>
         </div>
