@@ -15,6 +15,10 @@ body, html, .wrapper
 {
     width: 100%;
     height: 100%;
+    background-image: url(../img/bg-pattern.jpg);
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: repeat;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -40,8 +44,7 @@ body, html, .wrapper
 
 .content-right{
     float: right;
-    width: 40%;
-    margin-top: 0px;
+    max-width: 37%;
 }
 .logo-sidebar
 {

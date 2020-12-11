@@ -1,51 +1,3 @@
-<?php
-    include 'phpscripts/connect.php';
-
-    session_start();
-
-    $id = $_SESSION['currentid'];
-
-    $selectTransaction = "SELECT * FROM `transactions` WHERE `account_id` = '$id'";
-
-    $userQuery = $connection->query($selectTransaction);
-
-    $addedPanes = array();
-    
-    if ($userQuery->num_rows > 0) {
-        while($row = $userQuery->fetch_assoc()){
-            $name = $row['name'];
-            $type = $row['type'];
-            $income = $row['total_income'];
-            $expense = $row['total_expense'];
-            $date = $row['date_added'];
-            $addedElement = "<li>
-                                <div class='pane-content'>
-                                    <div class='container-content-data'>
-                                        <h2>$name</h2>
-                                        <table id='tb-transaction' cellpadding='10' cellspacing='0'>
-                                            <tr>
-                                                <th class='type'>Type</th>
-                                                <th class='income'>Income</th>
-                                                <th class='expense'>Expense</th>
-                                            </tr>
-
-                                            <tr id=>
-                                                <td>$type</td>
-                                                <td style='color: #089908'>Rp $income</td>
-                                                <td style='color: #ff0000'>Rp $expense</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <h3>Date added: <span class='unbold'>$date</span></h3>
-                                </div>
-                            <li>";
-            
-            $addedPanes[] = $addedElement;
-        }
-
-    }
-?>
-
 <!DOCTYPE html>
 
 <html>
@@ -58,9 +10,94 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style-global-app.css">
         <link rel="stylesheet" type="text/css" href="css/style-app-dashboard.css">
-        <link rel="stylesheet" type="text/css" href="css/style-app-dashboard.css">
     </head>
     <body>
+    <?php
+        include 'phpscripts/connect.php';
+
+        session_start();
+
+        $id = $_SESSION['currentid'];
+
+        $selectTransaction = "SELECT * FROM `transactions` WHERE `account_id` = '$id'";
+
+        $userQuery = $connection->query($selectTransaction);
+
+        $addedPanes = array();
+        $chartData = array();
+        $typeList = array();
+        
+        if ($userQuery->num_rows > 0) {
+            while($row = $userQuery->fetch_assoc()){
+                $name = $row['name'];
+                $type = $row['type'];
+                $income = $row['total_income'];
+                $expense = $row['total_expense'];
+                $date = $row['date_added'];
+
+                $typeList[] = $type;
+
+                $addedElement = "<li>
+                                    <div class='pane-content'>
+                                        <div class='container-content-data'>
+                                            <h2>$name</h2>
+                                            <table id='tb-transaction' cellpadding='10' cellspacing='0'>
+                                                <tr>
+                                                    <th class='type'>Type</th>
+                                                    <th class='income'>Income</th>
+                                                    <th class='expense'>Expense</th>
+                                                </tr>
+
+                                                <tr id=>
+                                                    <td>$type</td>
+                                                    <td style='color: #089908'>Rp $income</td>
+                                                    <td style='color: #ff0000'>Rp $expense</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <h3>Date added: <span class='unbold'>$date</span></h3>
+                                    </div>
+                                <li>";
+                
+                $addedPanes[] = $addedElement;
+            }
+            
+            $chartData = array_count_values($typeList);
+            $chartCasting = array();
+            foreach($chartData as $x => $x_value)
+            {
+                $chartCasting[] = array($x, $x_value);
+            }
+            echo "<script>
+                    var chartArray = ".json_encode($chartCasting)."
+                </script>";
+        }
+    ?>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script>
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(draw_my_chart);
+
+            function draw_my_chart() {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Type');
+                data.addColumn('number', 'Count');
+                for(i = 0; i < chartArray.length; i++){
+                    data.addRow([chartArray[i][0], chartArray[i][1]]);
+                }
+
+                var options = {title:'Transactions Distribution',
+                            titleTextStyle: {fontSize:18},
+                            width:360,
+                            height:390,
+                            pieHole: 0.6,
+                            legend: {position: 'bottom', maxLines: 10,textStyle: {fontSize: 12}},
+                            };
+
+                var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+                chart.draw(data, options);
+            }
+        </script>
         <div class="wrapper">
 <!-- ----------------------------------------------SIDEBAR------------------------------------------------- -->
             <div class="container-sidebar">
@@ -70,7 +107,7 @@
                 <div class="nav-and-acc">
                     <ul>
                         <li>
-                            <button class="btn-sidebar btn-sidebar-active">
+                            <button onclick="location.href='dashboard.php'" class="btn-sidebar btn-sidebar-active">
                                 <img src="img/icons/bar-chart-active.png" class="icons-sidebar">Dashboard</a>
                             </button>
                         </li>
@@ -80,12 +117,12 @@
                             </button>
                         </li>
                         <li>
-                            <button onclick="location.href='account.php'" class="btn-sidebar">
+                            <button class="btn-sidebar">
                                 <img src="img/icons/user.png" class="icons-sidebar">Account</a>
                             </button>
                         </li>
                         <li>
-                            <button onclick="location.href='landing.html'" class="btn-sidebar b">
+                            <button onclick="location.href='landing.html'" class="btn-sidebar">
                                 <img src="img/icons/logout.png" class="icons-sidebar">Sign Out</a>
                             </button>
                         </li>
@@ -105,49 +142,11 @@
         </ul>
         
     </div>
-    <!-- <div class="content-right">
+    <div class="content-right">
         <div class="pane-content">
-            <img src="img/piechart.png" id="img-piechart">
-            <table>
-                <tr>
-                    <th id="plan2">Planned</th>
-                    <th id="spent">Spent</th>
-                    <th id="remain">Remaining</th>
-                </tr>
-
-                <tr>
-                    <td id="var">Transportation</td>
-                    <td>Rp 500.000</td>
-                    <td id="persen">10%</td>
-                </tr>
-
-                <tr>
-                    <td id="var">Electric Bill</td>
-                    <td>Rp 750.000</td>
-                    <td id="persen">15%</td>
-                </tr>
-
-                <tr>
-                    <td id="var">Health</td>
-                    <td>Rp 1.500.000</td>
-                    <td id="persen">30%</td>
-                </tr>
-
-                <tr>
-                    <td id="var">Debt</td>
-                    <td>Rp 250.000</td>
-                    <td id="persen">5%</td>
-                </tr>
-
-                <tr>
-                    <td id="var">Food</td>
-                    <td>Rp 2.000.000</td>
-                    <td id="persen">40%</td>
-                </tr>
-            </table>
+            <div id="chart_div"></div>
         </div>
-
-    </div> -->
+    </div>
 </div>      
     </body>
 </html>
