@@ -16,7 +16,7 @@ Daftar halaman sementara:
 - Log In Page: Halaman log in
 - Sign Up Page: Halaman sign up
 - Dashboard: Menampilkan daftar transaksi yang dimiliki user
-- Transasction: Menambah transaksi baru ke database
+- Transaction: Menambah transaksi baru ke database
 - Account: Menampilkan dan bisa menyunting data user
 
 Daftar fungsionalitas sementara:
