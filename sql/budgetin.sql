@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2020 at 12:07 AM
+-- Generation Time: Dec 11, 2020 at 12:01 PM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -49,7 +49,9 @@ INSERT INTO `transactions` (`transaction_id`, `name`, `type`, `total_expense`, `
 (5, 'Internet Bill', 'Bill', 400000, 0, '2020-12-11', 1),
 (6, 'Martabak', 'Food', 15000, 0, '2020-12-11', 4),
 (7, 'Train Ride', 'Transportation', 80000, 0, '2020-12-11', 4),
-(8, 'Test', 'Food', 0, 0, '2020-12-11', 5);
+(8, 'Test', 'Food', 0, 0, '2020-12-11', 5),
+(10, 'Rent', 'Bill', 800000, 0, '2020-12-11', 2),
+(11, 'test2', 'Food', 0, 0, '2020-12-11', 6);
 
 -- --------------------------------------------------------
 
@@ -76,7 +78,8 @@ INSERT INTO `users` (`account_id`, `first_name`, `last_name`, `birth_date`, `use
 (2, 'Yusuf', 'Akbar', '2001-04-21', 'yusufak', 'yusufakbar@mail.com', 'Anu123'),
 (3, 'Abyan', 'Jiddan', '2001-01-21', 'abyanyan', 'abyanjiddan@mail.com', 'Iya123'),
 (4, 'Rio', 'Yuda', '2001-04-05', 'rioyuda', 'rioyuda@mail.com', 'Rio123'),
-(5, 'test', 'test', '2020-12-05', 'test', 'test', 'test');
+(5, 'test', 'test', '2020-12-05', 'test', 'test', 'test'),
+(6, 'test2', 'test2', '2020-12-02', 'test2', 'test2', 'test2');
 
 --
 -- Indexes for dumped tables
@@ -104,13 +107,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `transaction_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `transaction_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `account_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `account_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
